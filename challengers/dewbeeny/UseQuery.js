@@ -8,17 +8,18 @@ function useQuery({ queryKey, queryFn }) {
 
   async function fetchData() {
     try {
-      // 이러면 외부에서 현재 로딩중인지 아닌지를 알 수가 없고 최종 상태만 알 수 있음...
       isLoading = true;
+      return { isLoding };
       const data = await queryFn();
       QueryCache.addQuery(queryKey, data);
     } catch (error) {
       error = true;
+      return { error };
     } finally {
       isLoading = false;
+      return { isLoding };
     }
   }
 
   // 코드를 실행하면 persistent에 저장되어야하는 것 같은데...
-  return { data, isLoding, error };
 }
