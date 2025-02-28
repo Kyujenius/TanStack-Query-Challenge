@@ -1,4 +1,4 @@
-import QueryCache from "./query-cache.js";
+const QueryCache = require("./query-cache");
 
 function useQuery({ queryKey, queryFn }) {
   // 쿼리가 비어있는지 확인하는 코드 추가
@@ -20,6 +20,7 @@ function useQuery({ queryKey, queryFn }) {
       return { isLoding };
     }
   }
-
   // 코드를 실행하면 persistent에 저장되어야하는 것 같은데...
 }
+
+module.exports = useQuery;
