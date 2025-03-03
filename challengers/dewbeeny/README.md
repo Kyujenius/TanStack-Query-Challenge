@@ -14,7 +14,8 @@
 
 2. `useMutation` 의 주요 기능 제작
 
-- [ ] onSuccess / onError 기능
-- [ ] invalidateQueries 함수 활용
+- [x] onSuccess / onError 기능
+- [x] invalidateQueries 함수 활용
+  - mutationFn의 인자 값을 invalidateQueries로 전달달
 
 3. `Context API`를 통해서 전역적으로 쓸 수 있게 만들어주는 `useQueryClient` 제작 (많이 어려우면 2번까지만!!)

@@ -4,9 +4,10 @@ function useMutation({ mutationFn }) {
   let onSuccess = false;
   let error = false;
 
-  async function mutationData() {
+  async function mutationData(...args) {
     try {
-      const response = await mutationFn();
+      const response = await mutationFn(...args);
+      QueryCache.invalidateQueries(...args);
     } catch (error) {
       error = true;
       return { error };
