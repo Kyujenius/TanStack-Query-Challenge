@@ -6,11 +6,11 @@
   - `fetch`로 api 호출
   - "동시에" -> api 호출과 queryKey 등록 & 캐시 시간 등록을 비동기 처리
   - `Map` 으로 데이터 캐싱
-- [ ] 공통 로딩 상태 관리 isLoading (isPending 과 굳이 구분하지 않아도 됩니다 😄)
+- [x] 공통 로딩 상태 관리 isLoading (isPending 과 굳이 구분하지 않아도 됩니다 😄)
   - useQuery 호출시 isLoding 선언
   - 함수 호출을 try, catch로 감싸면 에러까지 같이 해결 할 수 있지 않을까?
   - promise의 pending을 활용해보면 어떨까?
-- [ ] 공통 에러 상태 관리 Error
+- [x] 공통 에러 상태 관리 Error
 
 2. `useMutation` 의 주요 기능 제작
 

@@ -5,12 +5,24 @@ const fetchData = async (url) => {
   return response.json();
 };
 
+// const createTodo = async (title) => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve({
+//         id: 2,
+//         title: title,
+//         body: "테스트 테스트",
+//       });
+//     }, 2000);
+//   });
+// }
+
 // API 호출 예제
 const apiURL = "https://jsonplaceholder.typicode.com/posts/1";
 
-const Post = () => {
+const get = () => {
   const { data, isLoading, error } = useQuery({
-    queryKey: ["posts"],
+    queryKey: ["Get"],
     queryFn: fetchData(apiURL),
   });
   if (isLoading) {
@@ -21,4 +33,25 @@ const Post = () => {
   }
 };
 
-Post();
+get();
+
+// const mutation = useMutation({
+//   mutationFn: createTodo,
+//   onMutate() {
+//     /* ... */
+//   },
+//   onSuccess(data) {
+//     console.log(data);
+//   },
+//   onError(err) {
+//     console.log(err);
+//   },
+//   onSettled() {
+//     /* ... */
+//   },
+// });
+
+// const onCreateTodo = (e) => {
+//   e.preventDefault();
+//   mutate({ title });
+// };
