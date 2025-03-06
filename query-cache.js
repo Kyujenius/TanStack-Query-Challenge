@@ -21,3 +21,5 @@ class QueryCache {
     });
   }
 }
+
+module.exports = QueryCache;
