@@ -10,7 +10,6 @@ export function useMutation<T>(
     isLoading: false,
     error: null,
     data: null,
-    mutate: async () => {},
   });
 
   const mutate = async (params?: any) => {
@@ -18,7 +17,7 @@ export function useMutation<T>(
 
     try {
       const result = await mutationFn(params);
-      setState({ isLoading: false, error: null, data: result, mutate });
+      setState({ isLoading: false, error: null, data: result });
       options?.onSuccess?.(result);
 
       if (options?.queryKey) {

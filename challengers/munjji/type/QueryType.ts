@@ -17,5 +17,4 @@ export interface MutationResult<T> {
   data: T | null;
   error: Error | null;
   isLoading: boolean;
-  mutate: (params: any) => Promise<void>;
 }
