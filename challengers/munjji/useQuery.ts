@@ -37,7 +37,7 @@ export function useQuery<T>(
       if (!isStale) return;
     }
 
-    // staleTime이 지나거나 캐시가 없으면 새로운 데이터 받아오기
+    // staleTime이 지나거나 캐시가 없으면 새로운 데이터 받아오기
     setState((prev) => ({ ...prev, isLoading: true }));
 
     queryFn()
