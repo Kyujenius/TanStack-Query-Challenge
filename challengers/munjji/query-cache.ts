@@ -1,4 +1,4 @@
-import { QueryResult } from "./type/QuerType";
+import { QueryResult } from "./type/QueryType";
 
 export class QueryCache {
   private queries: Map<string, any>;
